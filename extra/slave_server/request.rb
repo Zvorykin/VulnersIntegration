@@ -1,4 +1,5 @@
 require 'typhoeus'
+require 'open-uri'
 
 module VulnersRequest
   URL = 'http://vulners.com/api/v3/archive/collection'.freeze

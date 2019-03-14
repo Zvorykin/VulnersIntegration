@@ -2,19 +2,17 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 gem 'rubyzip', '>= 1.0.0'
 
+gem 'json-streamer'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.6'
 
 gem 'sinatra'
 gem 'thin'
 gem 'typhoeus'
-gem 'yajl-ruby', require: 'yajl'
-gem 'json-streamer'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
