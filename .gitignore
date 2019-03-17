@@ -1,4 +1,5 @@
-.idea
+.idea/*
 *.zip
 *.log
 log/*
+tmp/*

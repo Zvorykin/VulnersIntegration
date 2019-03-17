@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f087ea7-d557-49e1-98d6-e4c6fc3b56aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/services/vulners_service.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra/db_service/nats.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra/slave_server/server.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/rails_vulners_integration.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rails_vulners_integration.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/vulners_service.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/vulners_service.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/config.ru" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra/slave_server/vulners_types.rb" beforeDir="false" afterPath="$PROJECT_DIR$/extra/slave_server/vulners_types.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra/slave_server/cve.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra/slave_server/json_parser.rb" beforeDir="false" afterPath="$PROJECT_DIR$/extra/slave_server/json_parser.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra/slave_server/sinatra.rb" beforeDir="false" afterPath="$PROJECT_DIR$/extra/slave_server/sinatra.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra/slave_server/zip.rb" beforeDir="false" afterPath="$PROJECT_DIR$/extra/slave_server/zip.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/slave_server.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/slave_server.rake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -31,49 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/application.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rakefile">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/slave_server.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extra/slave_server/sinatra.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="306">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -81,49 +47,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra/slave_server/zip.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="102">
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extra/slave_server/vulners_types.rb">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/services/vulners_service.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="357">
+              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/extra/slave_server/sinatra.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" lean-forward="true" selection-end-line="64" selection-end-column="19" />
+              <folding>
+                <element signature="e#1260#1550#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/extra/slave_server/json_parser.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/extra/slave_server/server.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+              <folding>
+                <element signature="e#1260#1550#0" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/vulners_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/vulners_service.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extra/slave_server/request.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -141,6 +117,9 @@
     <findStrings>
       <find>@chunk_size</find>
       <find>create_logger</find>
+      <find>side_services</find>
+      <find>EVN</find>
+      <find>ENV['LOG_COUNT_EACH']</find>
     </findStrings>
   </component>
   <component name="GeneratorOptions">
@@ -154,17 +133,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config/boot.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/slave_server.rake" />
         <option value="$PROJECT_DIR$/config/spring.rb" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/extra/slave_server/parser.rb" />
         <option value="$PROJECT_DIR$/extra/slave_server/request.rb" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/extra/slave_server/zip.rb" />
-        <option value="$PROJECT_DIR$/extra/slave_server/json_parser.rb" />
-        <option value="$PROJECT_DIR$/extra/slave_server/sinatra.rb" />
         <option value="$PROJECT_DIR$/extra/slave_server/vulners_types.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/initializers/lograge.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/services/vulners.rb" />
@@ -173,9 +146,24 @@
         <option value="$PROJECT_DIR$/lib/SimpleLogger.rb" />
         <option value="$PROJECT_DIR$/lib/logger.rb" />
         <option value="$PROJECT_DIR$/lib/log.rb" />
-        <option value="$PROJECT_DIR$/app/services/vulners_service.rb" />
         <option value="$PROJECT_DIR$/app/controllers/vulners_controller.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/db/migrate/20190317150445_create_vulnerabilities.rb" />
+        <option value="$PROJECT_DIR$/app/models/vulnerability.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/sideservices.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/slave_server.rake" />
+        <option value="$PROJECT_DIR$/extra/db_service/nats.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/slave_server.rb" />
+        <option value="$PROJECT_DIR$/Rakefile" />
+        <option value="$PROJECT_DIR$/config.ru" />
+        <option value="$PROJECT_DIR$/extra/slave_server/sinatra.rb" />
+        <option value="$PROJECT_DIR$/app/services/vulners_service.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/extra/slave_server/zip.rb" />
+        <option value="$PROJECT_DIR$/extra/slave_server/json_parser.rb" />
+        <option value="$PROJECT_DIR$/extra/slave_server/server.rb" />
       </list>
     </option>
   </component>
@@ -187,10 +175,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-250" />
-    <option name="y" value="879" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="y" value="-1" />
+    <option name="width" value="810" />
+    <option name="height" value="998" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -201,7 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -235,6 +221,12 @@
             <path>
               <item name="rails_vulners_integration" type="b2602c69:ProjectViewProjectNode" />
               <item name="rails_vulners_integration" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rails_vulners_integration" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rails_vulners_integration" type="462c0819:PsiDirectoryNode" />
               <item name="extra" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -243,15 +235,11 @@
               <item name="extra" type="462c0819:PsiDirectoryNode" />
               <item name="slave_server" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="rails_vulners_integration" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rails_vulners_integration" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,16 +249,21 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/extra/slave_server/sinatra.rb" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Ruby" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/extra/slave_server" />
       <recent name="$PROJECT_DIR$/lib/common" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/extra" />
+      <recent name="$PROJECT_DIR$/config/initializers" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -285,7 +278,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Development: rails_vulners_integration">
+  <component name="RunManager" selected="Ruby.slave server">
+    <configuration name="rack" type="RackRunConfigurationType" factoryName="Rack">
+      <module name="rails_vulners_integration" />
+      <RACK_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="--jit" />
+      <RACK_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RACK_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RACK_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RACK_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="RubyDockerContainerSettingsRunConfigurationExtension" dockerComposeCommand="EXEC" />
+      <RACK_CONFIG_SETTINGS_ID NAME="PORT" VALUE="9292" />
+      <RACK_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RACK_CONFIG_SETTINGS_ID NAME="CONFIG_FILE" VALUE="config.ru" />
+      <RACK_CONFIG_SETTINGS_ID NAME="RACK_SERVER_TYPE" VALUE="default" />
+      <RACK_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Development: rails_vulners_integration" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="rails_vulners_integration" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -294,6 +309,11 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="DB_USER" value="admin" />
+        <env name="DB_PASSWORD" value="admin" />
+        <env name="LOG_COUNT_EACH" value="10" />
+      </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
@@ -385,13 +405,16 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
       <method v="2" />
     </configuration>
-    <configuration name="slave server" type="RubyRunConfigurationType" factoryName="Ruby">
+    <configuration name="sinatra" type="RubyRunConfigurationType" factoryName="Ruby">
       <module name="rails_vulners_integration" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="--jit" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/extra/slave_server" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/" />
       <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
       <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
       <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="LOG_COUNT_EACH" value="10" />
+      </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
@@ -404,12 +427,36 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method v="2" />
     </configuration>
+    <configuration name="slave server" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="rails_vulners_integration" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="--jit" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="LOG_COUNT_EACH" value="10" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="RubyDockerContainerSettingsRunConfigurationExtension" dockerComposeCommand="EXEC" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/extra/slave_server/server.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Rack.rack" />
       <item itemvalue="Rails.Development: rails_vulners_integration" />
       <item itemvalue="Rails.Production: rails_vulners_integration" />
       <item itemvalue="Rake.spec: rails_vulners_integration" />
       <item itemvalue="Rake.test: rails_vulners_integration" />
       <item itemvalue="Ruby.slave server" />
+      <item itemvalue="Ruby.sinatra" />
     </list>
   </component>
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
@@ -431,26 +478,27 @@
       <workItem from="1552636261547" duration="243000" />
       <workItem from="1552668382317" duration="12881000" />
       <workItem from="1552828368780" duration="16000" />
+      <workItem from="1552828400600" duration="20448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45456000" />
+    <option name="totallyTimeSpent" value="65904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1080" height="1920" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="top" id="Run" order="0" sideWeight="0.5744681" side_tool="true" weight="0.40270728" />
-      <window_info anchor="top" id="Terminal" order="1" sideWeight="0.62765956" side_tool="true" weight="0.3998872" />
-      <window_info anchor="top" id="Debug" order="2" sideWeight="0.42553192" weight="0.40270728" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21179885" />
+      <window_info active="true" anchor="top" id="Run" order="0" sideWeight="0.2698259" side_tool="true" visible="true" weight="0.40270728" />
+      <window_info anchor="top" id="Terminal" order="1" sideWeight="0.2698259" side_tool="true" weight="0.40270728" />
+      <window_info anchor="top" id="Debug" order="2" sideWeight="0.73017406" visible="true" weight="0.40270728" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24951644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Messages" order="3" visible="true" weight="0.33427283" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.33427283" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32994923" />
@@ -474,8 +522,10 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rails_vulners_integration@Development__rails_vulners_integration.rcov" NAME="Development: rails_vulners_integration Coverage Results" MODIFIED="1552680798906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_vulners_integration" />
-    <SUITE FILE_PATH="coverage/rails_vulners_integration@slave_server.rcov" NAME="slave server Coverage Results" MODIFIED="1552668578822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/extra/slave_server" MODULE_NAME="rails_vulners_integration" />
+    <SUITE FILE_PATH="coverage/rails_vulners_integration@rack.rcov" NAME="rack Coverage Results" MODIFIED="1552848069229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_vulners_integration" />
+    <SUITE FILE_PATH="coverage/rails_vulners_integration@sinatra.rcov" NAME="sinatra Coverage Results" MODIFIED="1552852684733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" MODULE_NAME="rails_vulners_integration" />
+    <SUITE FILE_PATH="coverage/rails_vulners_integration@Development__rails_vulners_integration.rcov" NAME="Development: rails_vulners_integration Coverage Results" MODIFIED="1552851661931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails_vulners_integration" />
+    <SUITE FILE_PATH="coverage/rails_vulners_integration@slave_server.rcov" NAME="slave server Coverage Results" MODIFIED="1552853121229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" MODULE_NAME="rails_vulners_integration" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -561,23 +611,6 @@
     <entry file="file://$PROJECT_DIR$/config/puma.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/boot.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/spring.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -589,13 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -630,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra/slave_server/json_parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/lograge.rb" />
     <entry file="file://$USER_HOME$/.rbenv/versions/2.6.1/lib/ruby/2.6.0/logger.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -649,20 +668,6 @@
     <entry file="file://$PROJECT_DIR$/lib/SimpleLogger.rb" />
     <entry file="file://$PROJECT_DIR$/lib/log.rb" />
     <entry file="file://$PROJECT_DIR$/app/services/basic_service.rb" />
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
@@ -670,27 +675,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/slave_server.rake">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra/slave_server/sinatra.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra/slave_server/zip.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state relative-caret-position="221">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -701,23 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/vulners_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/vulners_service.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra/slave_server/request.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -725,10 +706,164 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/application_controller_renderer.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/robots.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/jobs/application_job.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/spring.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/vulners_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra/db_service/nats.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/slave_server.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+        <state relative-caret-position="272">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/boot.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/slave_server.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.2.2/lib/action_controller/metal/basic_implicit_render.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/vulnerability.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190317150445_create_vulnerabilities.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ru">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra/slave_server/zip.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra/slave_server/json_parser.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra/slave_server/server.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          <folding>
+            <element signature="e#1260#1550#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra/slave_server/sinatra.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-end-line="64" selection-end-column="19" />
+          <folding>
+            <element signature="e#1260#1550#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/vulners_service.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
         </state>
       </provider>
     </entry>

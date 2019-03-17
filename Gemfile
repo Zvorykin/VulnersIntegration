@@ -10,14 +10,17 @@ gem 'awesome_print'
 gem 'rails_semantic_logger'
 
 gem 'json-streamer'
+gem 'yajl-ruby', require: 'yajl'
+
+gem 'nats'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.6'
 
 gem 'sinatra'
-gem 'thin'
 gem 'typhoeus'
 
 # Use Puma as the app server
+gem 'pg'
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

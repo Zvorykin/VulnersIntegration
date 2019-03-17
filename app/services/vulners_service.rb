@@ -1,27 +1,22 @@
-require 'typhoeus'
+require 'nats/client'
+require 'yajl/http_stream'
 
 module VulnersService
   class << self
+    LOG_COUNT = ENV['LOG_COUNT_EACH'].to_i || 10
+
     def start_integration
-      request = Typhoeus::Request.new('localhost:4567/get_vulners_data')
       count = 0
+      url = 'http://localhost:4567/get_vulners_data'
 
-      request.on_headers do |response|
-        raise "Request failed - #{response.code} #{response.status}" if response.code != 200
-      end
-
-      request.on_body do |chunk|
+      Yajl::HttpStream.get(url, symbolize_keys: true) do |hash|
         count += 1
+        Rails.logger.info "get #{count} records" if (count % LOG_COUNT).zero?
 
-        Rails.logger.info "get #{count} records" if (count % 10).zero?
-        # downloaded_file.write(chunk)
+        # NATS.publish('vulners.data', chunk)
       end
 
-      request.on_complete do
-        Rails.logger.info "proceed #{count} records total"
-      end
-
-      request.run
+      Rails.logger.info "proceed #{count} records total"
     end
   end
 end
