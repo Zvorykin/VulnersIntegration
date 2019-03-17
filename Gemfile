@@ -6,6 +6,9 @@ ruby '2.6.1'
 gem 'rails', '~> 5.2.1'
 gem 'rubyzip', '>= 1.0.0'
 
+gem 'awesome_print'
+gem 'rails_semantic_logger'
+
 gem 'json-streamer'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.6'
